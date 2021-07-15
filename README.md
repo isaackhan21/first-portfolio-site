@@ -6,3 +6,6 @@ I chose a nice milimilistic design for my site as I wanted to give the best user
 The site also has some fun sliding card effects for each section.
 
 The App was built in HTML, CSS and minimal Javascript.
+
+Project link:
+https://www.isaackhanportfolio.com
