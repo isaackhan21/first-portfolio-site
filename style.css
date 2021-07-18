@@ -19,15 +19,10 @@ body {
   font-family: "Jost", sans-serif;
 
   font-size: 1.3rem;
-  background-color: white;
 
   --nav-load-time: 300ms;
   --nav-link-load-time: 500ms;
   background-color: #262626;
-}
-
-#particles-js {
-  height: 100%;
 }
 
 .navbar {
@@ -199,10 +194,10 @@ body {
 
 @keyframes animate {
   0% {
-    filter: blur(50px) hue-rotate(0deg);
+    filter: blur(3.125rem) hue-rotate(0deg);
   }
   100% {
-    filter: blur(50px) hue-rotate(360deg);
+    filter: blur(3.125rem) hue-rotate(360deg);
   }
 }
 
