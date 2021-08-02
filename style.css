@@ -165,13 +165,11 @@ body {
 .glow-effect:before {
   content: "";
   position: absolute;
-  /* top: 85px; */
   top: 11.5vh;
   left: 15%;
   width: 70%;
   height: 70%;
   background: #ff3b8d;
-  /* box-shadow: -60px -55px 0 #07b2ff; */
   box-shadow: -3.75rem -3.438rem 0 #07b2ff;
   border-radius: 50%;
   animation: animate 5s linear infinite;
@@ -180,13 +178,11 @@ body {
 .glow-effect:after {
   content: "";
   position: absolute;
-  /* bottom: 85px; */
   bottom: 11.5vh;
   left: 15%;
   width: 70%;
   height: 70%;
   background: #8dff08;
-  /* box-shadow: 60px 55px 0 #ffeb3b; */
   box-shadow: 3.75rem 3.438rem 0 #ffeb3b;
   border-radius: 50%;
   animation: animate 5s linear infinite;
@@ -208,7 +204,6 @@ body {
   width: 100%;
   height: 100%;
   background: url(isaacprofilepic.jpg);
-  /* background-size: 550px; */
   background-size: 140%;
   background-position: center;
   border-radius: 50%;
@@ -221,10 +216,6 @@ body {
 .glow-effect span::before {
   content: "";
   position: absolute;
-  /* top: 8px;
-  left: 8px;
-  right: 8px;
-  bottom: 8px; */
   top: 50%;
   left: 50%;
   right: 50%;
@@ -243,6 +234,32 @@ body {
   align-items: center;
   width: auto;
   margin-right: 5rem;
+}
+
+.profile-pic-div:hover {
+  -webkit-animation: rotate-center 0.6s ease-in-out both;
+  animation: rotate-center 0.6s ease-in-out both;
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 .profile-pic-div {
@@ -363,9 +380,21 @@ body {
 
 .scroll {
   margin: 4rem;
+  height: 4.1vh;
 }
 
 .scroll-button {
+  text-decoration: none;
+  color: white;
+  border: 0.063rem solid #00bfff;
+  padding: 1rem;
+  transition: ease-out 0.3s;
+  position: relative;
+  z-index: 1;
+  width: auto;
+}
+
+.cv-button {
   text-decoration: none;
   color: white;
   border: 0.063rem solid #00ced1;
@@ -373,9 +402,15 @@ body {
   transition: ease-out 0.3s;
   position: relative;
   z-index: 1;
+  width: auto;
 }
 
 .scroll-button:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.cv-button:hover {
   color: #fff;
   cursor: pointer;
 }
@@ -389,10 +424,30 @@ body {
   bottom: 0;
   opacity: 0;
   content: "";
-  background-color: #00ced1;
+  background-color: #00bfff;
 }
 
 .scroll-button:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+
+.cv-button:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #00ced1;
+}
+
+.cv-button:hover:before {
   transition: 0.5s all ease;
   left: 0;
   right: 0;
@@ -414,9 +469,12 @@ body {
   align-items: flex-start;
   height: 80vh;
   width: 100vw;
-
-  padding-left: 6rem;
+  padding-left: 6em;
   padding-top: 0;
+  margin-left: 2rem;
+}
+
+.skill-percent {
   margin-left: 2rem;
 }
 
@@ -425,7 +483,7 @@ body {
 }
 
 .skills-paragraph li {
-  margin: 2rem;
+  margin: 1rem;
   font-size: 2.5rem;
   list-style: none;
   font-weight: 300;
@@ -448,7 +506,7 @@ body {
 }
 
 .skill-icon {
-  font-size: 5rem;
+  font-size: 4rem;
   transition: transform 0.2s;
 }
 
@@ -630,7 +688,7 @@ fa-laptop-code:hover {
 }
 
 .name {
-  margin-top: 5rem;
+  margin-top: 4rem;
   margin-right: 7rem;
   width: auto;
   height: 27.2vh;
@@ -651,6 +709,29 @@ fa-laptop-code:hover {
   overflow: auto;
   padding: 0 2rem;
   overflow-x: hidden;
+}
+
+.intro-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-buttons-div {
+  display: flex;
+  padding-left: 2.9em;
+}
+
+.cv-button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .intro-section {
@@ -678,8 +759,8 @@ fa-laptop-code:hover {
   justify-content: flex-start;
   border: 0.25rem solid white;
   margin-bottom: 2rem;
-  height: 140vh;
-  color: white;
+  height: 105vh;
+  color: black;
 }
 
 .projects-card {
@@ -689,6 +770,16 @@ fa-laptop-code:hover {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+
+  border: 0.25rem solid white;
+  height: 80vh;
 }
 
 .contact-card {
@@ -732,6 +823,47 @@ fa-laptop-code:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.about-container {
+  display: flex;
+  width: 100vw;
+  margin-top: 1rem;
+  justify-content: space-evenly;
+}
+
+.about-text-title {
+  font-family: "DM Sans", sans-serif;
+  color: #00bfff;
+  font-style: italic;
+  font-style: bold;
+  font-size: 4rem;
+}
+
+.about-text {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.about-text-container {
+  display: flex;
+  width: 50vw;
+}
+
+.fa-smile-wink {
+  font-size: 18rem;
+  color: yellow;
+}
+
+.fa-hand-spock {
+  color: yellow;
+  font-size: 10rem;
+  margin-bottom: 2.5rem;
+}
+
+.emoji {
+  display: flex;
+  align-items: center;
 }
 
 .click-images-text {
@@ -818,14 +950,14 @@ fa-laptop-code:hover {
 }
 
 .portfolio-image1 {
-  background-image: url(portfolio-image1.png);
+  background-image: url(Portfolio-Image-3.png);
   background-size: 100%;
   width: 40vw;
   height: 40vh;
 }
 
 .portfolio-image2 {
-  background-image: url(portfolio-image2.png);
+  background-image: url(Portfolio-Image-4.png);
   background-size: 100%;
   width: 40vw;
   height: 40vh;
